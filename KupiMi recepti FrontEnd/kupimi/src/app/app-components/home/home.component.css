@@ -1,0 +1,27 @@
+.block {
+    text-align: center;
+    vertical-align: middle;
+}
+.circle {
+    background: white;
+    border-radius: 200px;
+    color:  #484858  ;
+    height: 400px;
+    font-weight: bold;
+    width: 400px;
+    display: table;
+    margin: 200px auto;
+    font-size: 20px;
+}
+.circle p {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.slika4{
+
+    display: inline-block;
+    width: 600px;
+    margin: 10px; 
+
+}

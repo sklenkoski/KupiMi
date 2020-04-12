@@ -1,0 +1,15 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="card">
+  <img class="card-img-top" [src]="boxPromotion?.imageurl" alt="Card image cap">
+  <span class="tag" style="margin-top: 10px;">{{boxPromotion.price}} МКД</span>
+  <div class="card-body">
+    <h5 class="card-title">{{boxPromotion.name}}</h5>
+    <div class="card-info" style="display: block;"> 
+      <p class="card-text"><i class="fa fa-info" style="color: black;"></i> {{boxPromotion.shortDescription}}</p>
+    </div>
+    <button class="btn btn-success" style="margin-right: 10px;">Стави во корпа</button>
+    <button (click)="goToDetails()" class="btn btn-dark" id="kopche-detali">Детали</button><br>
+    <button (click)="goToUpdate()" *ngIf="show" class="btn btn-warning" id="kopche-izmeni">Измени</button>
+    <button (click)="DeleteBoxPromotion()" *ngIf="show" class="btn btn-danger" id="kopche-izbrishi">Избриши</button>
+  </div>
+</div>

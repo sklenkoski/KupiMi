@@ -1,0 +1,14 @@
+
+<div style="background-color: #dedede; ">
+    <img  class="slika" src="assets/recepti4.jpg" >
+    <h6 class="naslov">Направете го вистинскиот избор на рецепти!</h6>
+    <div class="container">
+        <div class="col-md-12 block">
+            <button *ngIf="show" (click)="goToAddRecipe()" class="btn btn-success">Додај рецепт</button>
+        </div>     
+        <div *ngFor="let recipe of recipes" class="choose-recipes-cards">
+            <app-recipe-card [recipe]="recipe"></app-recipe-card>     
+        </div>
+    </div>
+</div>
+

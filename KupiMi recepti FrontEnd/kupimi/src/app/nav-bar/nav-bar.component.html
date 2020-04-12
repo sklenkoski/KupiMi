@@ -1,0 +1,26 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<nav class="navbar navbar-expand-lg" id="navbar1" style="text-align: right;">
+    
+    <div class="container">
+    <a  href="/home" class="nav-link text-white" style="font-style: oblique; font-size: 20px;">КупиМи</a> 
+    <div class="options">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a  href="/recipes" class="nav-link text-white">Избери рецепт</a> 
+            </li>
+            <li class="nav-item">
+               <a  href="/boxes" class="nav-link text-white">Пакет промоции</a> 
+            </li>
+            <li class="nav-item">
+                <a *ngIf="show"  href="" class="nav-link text-white">{{this.storage.get('email')}}</a> 
+             </li>
+            <li class="nav-item" >
+                <button *ngIf="show" (click)="goToShoppingCart()" class="btn btn-light"><i class="fa fa-shopping-cart"></i></button> 
+             </li>
+            <li class="nav-item" >
+                <button *ngIf="show" (click)="LogOut()"class="btn btn-light">LOG OUT</button> 
+             </li>
+        </ul> 
+      </div>
+    </div>
+</nav>

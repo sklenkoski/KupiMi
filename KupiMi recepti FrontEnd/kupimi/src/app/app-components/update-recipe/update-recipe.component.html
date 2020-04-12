@@ -1,0 +1,67 @@
+
+<div class="container">
+    <h5 style="margin-top: 10px; font-style: oblique">Измени рецепт</h5>
+    <p style="margin-top: 10px; font-style: oblique">*Задолжително промени барем еден карактер во секое поле</p>
+    <form #UpdateForm="ngForm">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Име</label>
+                    <input ngModel #name="ngModel" class="form-control" name="name" [value]="recipe?.name">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Вид</label>
+                    <input ngModel #type="ngModel" class="form-control" name="type" [value]="recipe?.type" >
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Цена</label>
+                    <input ngModel #price="ngModel" class="form-control" name="price" [value]="recipe?.price" >
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Време потребно за приготвување</label>
+                    <input ngModel #cookingTime="ngModel" class="form-control" name="cookingTime" [value]="recipe?.cookingTime" >
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Број на порции</label>
+                    <input ngModel #portions="ngModel" class="form-control" name="portions" [value]="recipe?.portions" >
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Објаснување</label>
+                    <textarea ngModel #description="ngModel" class="form-control" name="description" [value]="recipe?.description" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Патека за слика</label>
+                    <input ngModel #imageurl="ngModel" class="form-control" name="imageurl" [value]="recipe?.imageurl" >
+                </div>
+            </div>
+        </div>
+        
+        <button (click)="updateRecipe(UpdateForm.form)" type="submit" class="btn btn-success" style="margin-right: 10px;">Промени</button>
+        <button (click)="goToRecipes()"type="button" class="btn btn-danger">Одкажи</button>
+
+    </form>
+</div>

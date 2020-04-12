@@ -1,0 +1,36 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+      <div class="fadeIn first">
+          <img [src]="recipe?.imageurl" id="icon" alt="User Icon" />
+          <span class="tag" style="margin-top: 10px;">{{recipe.price}} МКД</span>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">{{recipe.name}}</h5>
+        <div style="margin-bottom: 20px;">
+        <div class="card-info">
+          <p class="card-text"><i class="fa fa-clock-o" style="color: black;"></i>{{recipe.cookingTime}}</p>
+        </div>
+        <div class="card-info" > 
+          <p class="card-text"><i class="fa fa-compass" style="color: black;"></i> {{recipe.type}}</p>
+        </div>
+        <div class="card-info"> 
+          <p class="card-text"><i class="fa fa-users" style="color: black;"></i>{{recipe.portions}}</p>
+        </div>
+        <div class="card-info"> 
+          <p class="card-text"><i class="fa fa-star" style="color: black;"></i> 4.6</p>
+        </div>
+        </div>
+      </div>
+      <div class="card-info"  style="width: 70%;">
+        <p > {{recipe.description}}</p>
+      </div>
+
+        <button  class="btn btn-success" style="margin-right: 10px; margin-bottom: 20px;">Стави во корпа</button>
+        <button  (click)="goToRecipes()" class="btn btn-dark" id="kopche-detali" style="margin-right: 10px; margin-bottom: 20px;">Назад</button>
+      
+  </div>
+</div>

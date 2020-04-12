@@ -1,0 +1,70 @@
+
+
+<div style="background-color: #dedede;">
+    <div class="container" >
+        <h5 style=" font-style: oblique">Нов рецепт</h5>
+        <form #addForm="ngForm">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="title1">Име</label>
+                        <input required ngModel #name="ngModel" name="name" class="form-control" >
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group" ng-repeat="4">
+                        <label for="title1">Вид</label>
+                        <input required ngModel #type="ngModel" name="type" class="form-control" >
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="title1">Цена</label>
+                        <input required ngModel #price="ngModel" name="price" class="form-control">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="title1">Време потребно за приготвување</label>
+                        <input required ngModel #cookingTime="ngModel" name="cookingTime" class="form-control">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="title1">Број на порции</label>
+                        <input required ngModel #portions="ngModel" name="portions" class="form-control">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="title1">Објаснување</label>
+                        <textarea required ngModel #description="ngModel" name="description" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="title1">Патека за слика</label>
+                        <input required ngModel #imageurl="ngModel" name="imageurl" class="form-control">
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-success" style="margin-right: 10px; margin-bottom: 20px;" [disabled]="!addForm.form.valid" (click)="AddThisForm(addForm.form)">Додај</button>
+            <button type="button" class="btn btn-danger" style="margin-right: 10px; margin-bottom: 20px;" (click)="goToChooseRecipes()">Одкажи</button>
+    
+        </form>
+    </div>
+    
+</div>

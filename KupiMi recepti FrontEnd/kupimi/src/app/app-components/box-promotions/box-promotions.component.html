@@ -1,0 +1,20 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div style="background-color: #dedede; ">
+    <div id="top" style="background: url(assets/paket.jpg); background-size: 100% 100%; height: 200px">
+		<div class="row align-items-center h-100 w-100">
+			<div class="text-center col">
+				<h1 style="font-size: 72px; color: white; font-style: oblique; ">Пакет промоции</h1>
+			</div>
+        </div>
+    </div>
+    <div style="background-color: #dedede; ">
+        <div class="container">
+            <div class="col-md-12 block" style="margin-top: 10px;">
+                <button *ngIf="show" (click)="goToAddBoxPromotion()"class="btn btn-success">Додај промоција</button>
+            </div>
+            <div *ngFor="let boxPromotion of boxPromotions" class="boxPromotion-cards">
+                <app-box-promotion-card [boxPromotion]="boxPromotion"></app-box-promotion-card>     
+            </div>
+        </div>
+    </div>
+</div>

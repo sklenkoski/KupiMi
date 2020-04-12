@@ -1,0 +1,89 @@
+.card{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+#kopche-detali{
+    vertical-align: bottom;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#kopche-izmeni{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#kopche-izbrishi{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.card-info{
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.slika{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+.tag {
+    display: inline-block;
+    
+    width: auto;
+    height: 38px;
+    
+    background-color: #979797;
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+    
+    border-left: 1px solid #979797;
+  
+
+    margin-left: 19px;
+    
+    position: relative;
+    
+    color: white;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22px;
+    line-height: 38px;
+  
+    padding: 0 10px 0 10px;
+  }
+
+  .tag:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid #979797;
+  }
+  
+
+  .tag:after {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 17px;
+  }

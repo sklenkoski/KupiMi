@@ -1,0 +1,61 @@
+<div class="container" >
+    <h5 style="margin-top: 10px; font-style: oblique">Нова пакет промоција</h5>
+    <form #addForm="ngForm">  
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Име</label>
+                    <input required ngModel #name="ngModel" name="name" class="form-control" >
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Цена</label>
+                    <input equired ngModel #price="ngModel" name="price" class="form-control">
+                </div>
+            </div>
+        </div>  
+        
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Патека до сликата</label>
+                    <input equired ngModel #imageurl="ngModel" name="imageurl" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Кратко објаснување</label>
+                    <textarea required ngModel #shortDescription="ngModel" name="shortDescription" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="title1">Долго објаснување</label>
+                    <textarea required ngModel #longDescription="ngModel" name="longDescription"class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <h3 style="margin-top: 20px;">Рецепти: </h3>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+        <label formArrayName="orders" *ngFor="let order of form.value.orders ; let i = index" style="display: block;">
+          <input type="checkbox" [formControlName]="i" /> {{ordersData[i].name}}
+        </label>
+      
+        <div *ngIf="!form.valid">At least one order must be selected</div>
+        <button type="submit" class="btn btn-warning">Додај Рецепти</button>
+        </form>
+  
+        <button type="submit" class="btn btn-success" style="margin-right: 10px; margin-top: 20px;" [disabled]="!addForm.form.valid" (click)="AddThisForm(addForm.form)">Додај промоција</button>
+        <button type="button" class="btn btn-danger" style="margin-top: 20px;" (click)="goToBoxPromotions">Одкажи</button>
+
+    </form>
+</div>
+
