@@ -1,18 +1,15 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <div class="wrapper fadeInDown">
     <div id="formContent">
-        <!-- Tabs Titles -->
 
-        <!-- Icon -->
         <div class="fadeIn first">
             <img src="assets/hat-chef.jpg" id="icon" alt="User Icon" />
         </div>
 
-        <!-- Login Form -->
         <form #LoginForm="ngForm">
             <div class="form-group">
                 <input ngModel #firstName="ngModel" *ngIf="checked.value" required type="text" id="name" class="fadeIn first" name="name"
@@ -24,7 +21,6 @@
                 <button type="submit" class="fadeIn fourth btn btn-info" [disabled]="!LoginForm.form.valid" (click)="logIn(LoginForm.form)">Log In / Register</button>
             </div>
 
-            <!-- Remind Passowrd -->
             <div class="form-group">
                 <div id="formFooter">
                     <input ngModel #checked="ngModel" name="checked" type="checkbox" class="form-check-input">

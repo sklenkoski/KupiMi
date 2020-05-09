@@ -13,11 +13,15 @@ public interface RecipeRepository{
 
     List<Recipe> findAll();
 
+    List<Recipe> getRecipesByType(String type);
+
     Optional<Recipe> findById(String id);
 
     void deleteById(String id);
 
     Recipe save(Recipe recipe);
+
+
 
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-users-admin',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersAdminComponent implements OnInit {
 
-  constructor() { }
+ 
+  constructor(
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
   }
-
 }

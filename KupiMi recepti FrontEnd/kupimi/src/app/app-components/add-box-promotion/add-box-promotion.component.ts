@@ -5,6 +5,7 @@ import { RecipeResponse, RecipesResponse } from 'src/app/responses/app-responses
 import { RecipeService } from 'src/app/services/recipe.service';
 import { BoxPromotionRequset, RecipeUpdateRequest } from 'src/app/requests/app-requests';
 import { BoxPromotionService } from 'src/app/services/box-promotion.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 
 
@@ -24,6 +25,7 @@ export class AddBoxPromotionComponent implements OnInit {
     private router: Router,
     private boxPromotionService: BoxPromotionService,
     private recipeService: RecipeService,
+    private notifyService : NotificationService,
     private formBuilder: FormBuilder) { 
       this.form = this.formBuilder.group({
         orders: new FormArray([], minSelectedCheckboxes(1))
@@ -84,14 +86,16 @@ export class AddBoxPromotionComponent implements OnInit {
     this.boxPromotionService.createBoxPromotion(this.boxPromotionRequest).subscribe(
       result=> {
         console.log(result);
-        this.router.navigate(['/boxes'])
       }
-    )
 
+    )
+    this.notifyService.showSuccess("Box promotion is added successfully!", "KupiMi.com");
   }
 
   public goToBoxPromotions(): void{
-    this.router.navigate(['/boxes'])
+    this.router.navigate(['/boxes']).then(() =>{
+      window.location.reload()
+    })
   }
 }
 

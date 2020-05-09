@@ -27,6 +27,11 @@ public class RecipeApi {
         return recipeService.findAll();
     }
 
+    @GetMapping("/type/{type}")
+    public List<Recipe> getRecipesByType(@PathVariable String type) {
+        return recipeService.getRecipesByType(type);
+    }
+
     @GetMapping("/{id}")
     public Optional<Recipe> getRecipe(@PathVariable String id){
         return this.recipeService.getRecipe(id);

@@ -32,6 +32,13 @@ import { BoxPromotionsAdminComponent } from './app-components/box-promotions-adm
 import { RecipesAdminComponent } from './app-components/recipes-admin/recipes-admin.component';
 import { OrdersAdminComponent } from './app-components/orders-admin/orders-admin.component';
 import { UsersAdminComponent } from './app-components/users-admin/users-admin.component';
+import { RecipeNavBarComponent } from './app-components/recipe-nav-bar/recipe-nav-bar.component';
+import { BreakfastComponent } from './app-components/breakfast/breakfast.component';
+import { LunchDinnerComponent } from './app-components/lunch-dinner/lunch-dinner.component';
+import { DessertComponent } from './app-components/dessert/dessert.component';
+import { RecipeCard2Component } from './app-components/recipe-card2/recipe-card2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -59,6 +66,11 @@ import { UsersAdminComponent } from './app-components/users-admin/users-admin.co
     RecipesAdminComponent,
     OrdersAdminComponent,
     UsersAdminComponent,
+    RecipeNavBarComponent,
+    BreakfastComponent,
+    LunchDinnerComponent,
+    DessertComponent,
+    RecipeCard2Component,
 
   ],
   imports: [
@@ -69,7 +81,9 @@ import { UsersAdminComponent } from './app-components/users-admin/users-admin.co
     HttpClientModule,
     AngularFireModule.initializeApp( environment.firebase ),
     AngularFireAuthModule,
-    StorageServiceModule
+    StorageServiceModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

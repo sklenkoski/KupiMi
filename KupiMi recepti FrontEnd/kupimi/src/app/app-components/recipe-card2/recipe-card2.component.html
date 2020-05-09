@@ -1,0 +1,23 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="card">
+  <img class="card-img-top" [src]="recipe?.imageurl" alt="Card image cap" style="width: 100%; height: 300px;">
+  <span class="tag" style="margin-top: 10px;">{{recipe.price}} МКД</span>
+  <div class="card-body">
+    <h5 class="card-title">{{recipe.name}}</h5>
+    <div class="card-info">
+      <p class="card-text"><i class="fa fa-clock-o" style="color: black;"></i> {{recipe.cookingTime}}</p>
+    </div>
+    <div class="card-info"> 
+      <p class="card-text"><i class="fa fa-users" style="color: black;"></i> {{recipe.portions}}</p>
+    </div>
+    <div class="card-info"> 
+      <p class="card-text"><i class="fa fa-compass" style="color: black;"></i> {{recipe.type}}</p>
+    </div>
+    <div class="card-info"> 
+      <p class="card-text"><i class="fa fa-star" style="color: black;"></i> </p>
+    </div>
+    <button (click)="addToShoppingCart()"class="btn btn-success" style="margin-right: 10px;">Стави во корпа</button>
+    <button (click)="goToDetails()" class="btn btn-dark" id="kopche-detali">Детали</button>
+  </div>
+</div>
+
