@@ -247,7 +247,7 @@ stefanklenkoski@gmail.com	t	Stefan	Klenkoski
 testovski@gmail.com	f	test	test
 testsnimka@gmail.com	f	Test	Test
 testnot@gmail.com	f	testnot	testnot
-testettt@gmail.com	f	Najgolem	Testovski
+testettt@gmail.com	t	Najgolem	Testovski
 \.
 
 
