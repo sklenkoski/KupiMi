@@ -42,4 +42,14 @@ public class OrderApi {
     public void deleteOrder(@PathVariable String id) {
         orderService.deleteOrder(id);
     }
+
+    @GetMapping("count/{town}")
+    public int countByTown(@PathVariable String town) {
+        return orderService.countByTown(town);
+    }
+
+    @GetMapping("sum/{year}")
+    public int sumPriceByYear(@PathVariable String year) {
+        return orderService.sumPriceByYear(year);
+    }
 }

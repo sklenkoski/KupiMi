@@ -29,7 +29,7 @@ import { environment } from 'src/environments/environment';
 import { StorageServiceModule} from 'ngx-webstorage-service';
 import { BoxPromotionDetailsComponent } from './app-components/box-promotion-details/box-promotion-details.component';
 import { BoxPromotionsAdminComponent } from './app-components/box-promotions-admin/box-promotions-admin.component';
-import { RecipesAdminComponent } from './app-components/recipes-admin/recipes-admin.component';
+
 import { OrdersAdminComponent } from './app-components/orders-admin/orders-admin.component';
 import { UsersAdminComponent } from './app-components/users-admin/users-admin.component';
 import { RecipeNavBarComponent } from './app-components/recipe-nav-bar/recipe-nav-bar.component';
@@ -39,6 +39,8 @@ import { DessertComponent } from './app-components/dessert/dessert.component';
 import { RecipeCard2Component } from './app-components/recipe-card2/recipe-card2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ChartsModule } from 'ng2-charts';
+import { RecipesAdminComponent } from './app-components/recipes-admin/recipes-admin.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +85,8 @@ import { ToastrModule } from 'ngx-toastr';
     AngularFireAuthModule,
     StorageServiceModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

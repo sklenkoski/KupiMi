@@ -33,4 +33,13 @@ export class OrdersService {
   public deleteOrder(id: String): Observable<{ }> {
     return this.http.delete<{}>(`${this.url}/delete/${id}`);
   }
+
+
+  public countByTown(town: String): Observable<number> {
+    return this.http.get<number>(`${this.url}/count/${town}`);
+  }
+
+  public sumPriceByYear(year: String): Observable<number> {
+    return this.http.get<number>(`${this.url}/sum/${year}`);
+  }
 }

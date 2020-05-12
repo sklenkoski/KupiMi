@@ -1,6 +1,8 @@
 
+<div style="background-color: #dedede;" >
+
 <div class="container">
-    <h5 style="margin-top: 10px; font-style: oblique">Измени промоција</h5>
+    <h5 style=" font-style: oblique">Измени промоција</h5>
     <p style="margin-top: 10px; font-style: oblique">*Задолжително промени барем еден карактер во секое поле</p>
     <form #UpdateForm="ngForm">
         <div class="row">
@@ -45,8 +47,9 @@
             </div>
         </div>
     
-        <button (click)="updateBoxPromotion(UpdateForm.form)" type="submit" class="btn btn-success" style="margin-right: 10px;">Промени</button>
-        <button (click)="goToBoxPromotions()"type="button" class="btn btn-danger">Назад</button>
+        <button (click)="updateBoxPromotion(UpdateForm.form)" type="submit" class="btn btn-success" style="margin-right: 10px; margin-bottom: 20px;">Промени</button>
+        <button (click)="goToBoxPromotions()" type="button" class="btn btn-danger" style="margin-right: 10px; margin-bottom: 20px;">Назад</button>
 
     </form>
+</div>
 </div>

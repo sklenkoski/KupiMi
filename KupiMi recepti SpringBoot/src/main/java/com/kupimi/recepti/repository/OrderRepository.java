@@ -18,4 +18,8 @@ public interface OrderRepository{
     void deleteById(String Id);
 
     Order save(Order order);
+
+    int countByTown(String town);
+
+    int sumPriceByYear(String year);
 }

@@ -61,4 +61,14 @@ public class OrderServiceImpl implements OrderService {
     public void deleteOrder(String id) {
         this.orderRepository.deleteById(id);
     }
+
+    @Override
+    public int countByTown(String town) {
+        return this.orderRepository.countByTown(town);
+    }
+
+    @Override
+    public int sumPriceByYear(String year) {
+        return this.orderRepository.sumPriceByYear(year);
+    }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="orders")
+@Table(name="orders", schema = "public")
 public class Order {
 
     @Id
@@ -29,6 +29,8 @@ public class Order {
 
     @ManyToMany(targetEntity=BoxPromotion.class)
     public List<BoxPromotion> boxPromotions;
+
+    public String Date;
 
     public int price;
 

@@ -37,4 +37,14 @@ public class OrderRepositoryImpl implements OrderRepository {
     public Order save(Order order) {
         return this.repository.save(order);
     }
+
+    @Override
+    public int countByTown(String town) {
+        return this.repository.countByClientAddressContains(town);
+    }
+
+    @Override
+    public int sumPriceByYear(String year) {
+        return repository.sumByYear(year);
+    }
 }

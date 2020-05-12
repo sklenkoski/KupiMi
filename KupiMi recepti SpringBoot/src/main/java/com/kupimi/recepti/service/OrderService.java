@@ -17,4 +17,8 @@ public interface OrderService {
     Optional<Order> getOrder(String id);
 
     void deleteOrder(String id);
+
+    int countByTown(String town);
+
+    int sumPriceByYear(String year);
 }
