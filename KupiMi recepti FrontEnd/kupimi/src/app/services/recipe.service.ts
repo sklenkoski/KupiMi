@@ -22,6 +22,10 @@ export class RecipeService {
     return this.http.get<RecipesResponse>(this.url);
   }
 
+  public getRecipesByType(type: string): Observable<RecipesResponse> {
+    return this.http.get<RecipesResponse>(`${this.url}/type/${type}`);
+  }
+
   public getRecipe(id: String): Observable<RecipeResponse> {
     return this.http.get<RecipeResponse>(`${this.url}/${id}`);
   }

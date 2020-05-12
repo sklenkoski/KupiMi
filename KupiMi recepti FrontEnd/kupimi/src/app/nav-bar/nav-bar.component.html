@@ -12,7 +12,7 @@
                <a  href="/boxes" class="nav-link text-white">Пакет промоции</a> 
             </li>
             <li class="nav-item">
-                <a *ngIf="show"  href="" class="nav-link text-white">{{this.storage.get('email')}}</a> 
+                <a *ngIf="show" class="nav-link text-white">{{this.storage.get('email')}}</a> 
              </li>
             <li class="nav-item" >
                 <button *ngIf="show" (click)="goToShoppingCart()" class="btn btn-light"><i class="fa fa-shopping-cart"></i></button> 

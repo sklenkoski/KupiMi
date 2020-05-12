@@ -1,0 +1,15 @@
+.choose-recipes-cards{
+    display: inline-block;
+}
+
+.slika{
+    width: 100%;
+    height: 200px;
+    }
+
+.naslov{
+    font-size: 35px; 
+    margin-top: 20px; 
+    margin-left: 20px;
+    font-style: italic;
+}

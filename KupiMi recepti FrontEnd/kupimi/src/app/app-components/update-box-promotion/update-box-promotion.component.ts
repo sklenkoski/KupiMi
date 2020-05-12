@@ -4,6 +4,7 @@ import { BoxPromotionUpdateRequset } from 'src/app/requests/app-requests';
 import { BoxPromotionResponse } from 'src/app/responses/app-responses';
 import { BoxPromotionService } from 'src/app/services/box-promotion.service';
 import { FormGroup } from '@angular/forms';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-update-box-promotion',
@@ -16,7 +17,8 @@ export class UpdateBoxPromotionComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private boxPromotionService: BoxPromotionService 
+    private boxPromotionService: BoxPromotionService,
+    private notifyService : NotificationService 
   ) { }
 
   ngOnInit(): void {
@@ -30,11 +32,14 @@ export class UpdateBoxPromotionComponent implements OnInit {
     this.boxPromotionUpdateRequest=updateForm.value
     this.boxPromotionUpdateRequest.id=this.route.snapshot.params['id']
     this.boxPromotionService.updateBoxPromotion(this.boxPromotionUpdateRequest, this.boxPromotionUpdateRequest.id).subscribe()
-    this.router.navigate(['/boxes'])
+    this.notifyService.showSuccess("Box promotion is updated successfully!", "KupiMi.com");
+    
   }
 
   public goToBoxPromotions(): void{
-    this.router.navigate(['/boxes'])
+    this.router.navigate(['/boxes']).then(() =>{
+      window.location.reload()
+    })
   }
 
 }

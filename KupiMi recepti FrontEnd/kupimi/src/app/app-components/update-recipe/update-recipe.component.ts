@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { FormGroup } from '@angular/forms';
 import { RecipeRequest, RecipeUpdateRequest } from 'src/app/requests/app-requests';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-update-recipe',
@@ -16,7 +17,8 @@ export class UpdateRecipeComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private recipeservice: RecipeService 
+    private recipeservice: RecipeService,
+    private notifyService : NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -30,11 +32,13 @@ export class UpdateRecipeComponent implements OnInit {
     this.recipeUpdateRequest=updateForm.value
     this.recipeUpdateRequest.id=this.route.snapshot.params['id']
     this.recipeservice.updateRecipe(this.recipeUpdateRequest, this.recipeUpdateRequest.id).subscribe()
-    this.router.navigate(['/recipes'])
+    this.notifyService.showSuccess("Recipe is updated successfully!", "KupiMi.com");
   }
 
   public goToRecipes(): void{
-    this.router.navigate(['/recipes'])
+    this.router.navigate(['/recipes']).then(() =>{
+      window.location.reload()
+    })
   }
 
 
