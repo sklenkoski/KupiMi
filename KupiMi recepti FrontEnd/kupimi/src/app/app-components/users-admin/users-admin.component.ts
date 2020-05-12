@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, OnInit, Inject } from '@angular/core';
 import { UsersResponse, UserResponse } from 'src/app/responses/app-responses';
 import { UsersService } from 'src/app/services/users.service';
 import { User } from 'src/app/classes/user';
 
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> parent of 76ecb43... Find Recipes By Type
 =======
 import { Component, OnInit } from '@angular/core';
 >>>>>>> parent of 76ecb43... Find Recipes By Type
@@ -15,6 +19,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersAdminComponent implements OnInit {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   public users : UsersResponse
   data: any;
@@ -28,6 +33,11 @@ export class UsersAdminComponent implements OnInit {
       console.log(params),
       this.users=params
     })
+=======
+  constructor() { }
+
+  ngOnInit(): void {
+>>>>>>> parent of 76ecb43... Find Recipes By Type
 =======
   constructor() { }
 
