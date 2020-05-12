@@ -32,6 +32,7 @@ import { BoxPromotionsAdminComponent } from './app-components/box-promotions-adm
 
 import { OrdersAdminComponent } from './app-components/orders-admin/orders-admin.component';
 import { UsersAdminComponent } from './app-components/users-admin/users-admin.component';
+<<<<<<< HEAD
 import { RecipeNavBarComponent } from './app-components/recipe-nav-bar/recipe-nav-bar.component';
 import { BreakfastComponent } from './app-components/breakfast/breakfast.component';
 import { LunchDinnerComponent } from './app-components/lunch-dinner/lunch-dinner.component';
@@ -41,6 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ChartsModule } from 'ng2-charts';
 import { RecipesAdminComponent } from './app-components/recipes-admin/recipes-admin.component';
+=======
+>>>>>>> parent of 76ecb43... Find Recipes By Type
 
 @NgModule({
   declarations: [
@@ -68,11 +71,6 @@ import { RecipesAdminComponent } from './app-components/recipes-admin/recipes-ad
     RecipesAdminComponent,
     OrdersAdminComponent,
     UsersAdminComponent,
-    RecipeNavBarComponent,
-    BreakfastComponent,
-    LunchDinnerComponent,
-    DessertComponent,
-    RecipeCard2Component,
 
   ],
   imports: [
@@ -83,10 +81,14 @@ import { RecipesAdminComponent } from './app-components/recipes-admin/recipes-ad
     HttpClientModule,
     AngularFireModule.initializeApp( environment.firebase ),
     AngularFireAuthModule,
+<<<<<<< HEAD
     StorageServiceModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     ChartsModule
+=======
+    StorageServiceModule
+>>>>>>> parent of 76ecb43... Find Recipes By Type
   ],
   providers: [],
   bootstrap: [AppComponent]

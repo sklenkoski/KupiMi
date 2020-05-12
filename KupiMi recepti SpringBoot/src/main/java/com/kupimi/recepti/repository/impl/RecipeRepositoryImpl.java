@@ -24,11 +24,6 @@ public class RecipeRepositoryImpl implements RecipeRepository {
     }
 
     @Override
-    public List<Recipe> getRecipesByType(String type) {
-        return repository.findByType(type);
-    }
-
-    @Override
     public Optional<Recipe> findById(String id) {
         return this.repository.findById(id);
     }

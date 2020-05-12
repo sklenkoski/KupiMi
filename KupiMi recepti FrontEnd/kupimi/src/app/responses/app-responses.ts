@@ -6,7 +6,7 @@ export class RecipeResponse {
     public readonly id: string;
     public readonly name: string;
     public readonly price: number;
-    public readonly type: string;
+    public readonly type: string
     public readonly description: string;
     public readonly cookingTime: string;
     public readonly portions: string;

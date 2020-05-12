@@ -6,7 +6,6 @@ import { UserRequest } from '../requests/app-requests';
 import { Router } from '@angular/router';
 import { WebStorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
 import { UsersService } from './users.service';
-import { NotificationService } from './notification.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +18,7 @@ export class AuthService {
     private afAuth: AngularFireAuth,
     private router: Router,
     @Inject(LOCAL_STORAGE) private storage: WebStorageService,
-    private userService: UsersService,
-    private notifyService: NotificationService
+    private userService: UsersService
 
   ) { }
 
@@ -29,7 +27,6 @@ export class AuthService {
       result => {
         this.userService.createUser(userRequest).subscribe(params =>{
           this.storage.set('email', userRequest.email)
-          
         })
       }
     )
@@ -43,9 +40,7 @@ export class AuthService {
       result => {
         console.log(result)
         this.storage.set('email', email)
-        this.router.navigate(['/home']).then(() => {
-          window.location.reload();
-        })
+        this.router.navigate(['/home'])
       }
     )
     .catch(error => {
@@ -57,9 +52,7 @@ export class AuthService {
      this.afAuth.signOut().then(result =>{
        console.log(result)
         this.storage.clear()
-        this.router.navigate(['/log-in']).then(() => {
-          window.location.reload();
-        })
+        this.router.navigate(['/log-in'])
      }).catch(error => {
       this.eventAuthError.next(error);
     })

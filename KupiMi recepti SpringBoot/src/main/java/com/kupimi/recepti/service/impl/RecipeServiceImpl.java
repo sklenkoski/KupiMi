@@ -24,11 +24,6 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public List<Recipe> getRecipesByType(String type) {
-        return this.recipeRepository.getRecipesByType(type);
-    }
-
-    @Override
     public Recipe createRecipe(Recipe recipe) throws Exception {
         if(recipe == null){
             throw new Exception();

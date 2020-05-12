@@ -18,9 +18,6 @@ import { BoxPromotionsAdminComponent } from './app-components/box-promotions-adm
 import { OrdersAdminComponent } from './app-components/orders-admin/orders-admin.component';
 import { UsersAdminComponent } from './app-components/users-admin/users-admin.component';
 import { CheckOutComponent } from './app-components/check-out/check-out.component';
-import { BreakfastComponent } from './app-components/breakfast/breakfast.component';
-import { LunchDinnerComponent } from './app-components/lunch-dinner/lunch-dinner.component';
-import { DessertComponent } from './app-components/dessert/dessert.component';
 
 
 const routes: Routes = [
@@ -97,18 +94,6 @@ const routes: Routes = [
 {
   path:'users-admin',
   component: UsersAdminComponent,
-},
-{
-  path:'recipes/type/breakfast',
-  component: BreakfastComponent,
-},
-{
-  path:'recipes/type/lunch-dinner',
-  component: LunchDinnerComponent,
-},
-{
-  path:'recipes/type/dessert',
-  component: DessertComponent,
 },
 {
   path:'**',

@@ -29,7 +29,7 @@ public class Recipe {
     public String name;
 
     public int price;
-    public String type;
+    public String Type;
 
     @Column(length = 4096)
     public String description;
